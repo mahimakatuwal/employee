@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: Aney
+Build-Jdk: 15.0.2
+Implementation-Title: boot-employee
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: bootday
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/boot-employee
+Created-By: Maven Integration for Eclipse
+
