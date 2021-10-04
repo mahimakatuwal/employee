@@ -19,11 +19,8 @@
 <style>
 .alert {
   padding: 20px;
-  background-color: #1A237E;
-  color: #fff;
-  font-size: 14px;
-  text-align: center;
-  }
+  background-color: ;
+  color: white;}
   
   .closebtn {
   margin-left: 15px;
@@ -189,15 +186,15 @@ a {
 		</nav>
 		<br>
 		
-		<div class="alert">
+		
+	
+	</div>
+	<%-- <div class="alert">
 		 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
 			<h4>${InvalidMsg}</h4>
 			<h3>${showAllMsg}</h3>
 			<h3>${logoutMsg}</h3>
-		</div>
-	
-	</div>
-	
+		</div> --%>
 		
 	<div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
     <div class="card card0 border-0">

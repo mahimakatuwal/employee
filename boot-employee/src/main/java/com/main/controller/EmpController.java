@@ -23,7 +23,7 @@ public class EmpController {
 	@Autowired
 	EmpService empService; // autowire interface
 
-	@GetMapping("register")
+	@GetMapping({"register","/"})
 	String empRegister() {
 		return "EmployeeRegistration";
 	}
@@ -94,7 +94,7 @@ public class EmpController {
 
 	@GetMapping("login")
 	String showLoginPage() {
-		return "loginPage";
+		return "login";
 	}
 
 	@PostMapping("login")
