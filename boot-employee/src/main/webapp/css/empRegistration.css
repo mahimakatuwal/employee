@@ -1,0 +1,28 @@
+@charset "ISO-8859-1";
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white; 
+}
+
+body{
+	background-color: #d2cafb!important; 
+	background-repeat:no-repeat;
+   background-size:cover;
+   background-position: center center;
+}
+
+nav {
+	display:table;
+	margin:50px auto;
+	background-color: #77dd77;
+  	box-shadow:0px 2px 0px #9932cc;
+  	font-family: 'Open Sans', sans-serif;
+}
+
+h1{
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	
+}

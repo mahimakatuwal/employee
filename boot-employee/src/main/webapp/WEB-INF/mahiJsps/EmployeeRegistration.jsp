@@ -5,8 +5,6 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Employee Registration</title>
-
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -17,41 +15,15 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	
-<style>
-.alert {
-  padding: 20px;
-  background-color: #f44336;
-  color: white; 
-}
-
-body{
-	background-image: url("images/bg2.jpg"); 
-	background-repeat:no-repeat;
-   background-size:cover;
-   background-position: center center;
-}
-
-nav {
-	display:table;
-	margin:50px auto;
-	background-color: #77dd77;
-  	box-shadow:0px 2px 0px #9932cc;
-  	font-family: 'Open Sans', sans-serif;
-}
-
-h1{
-	font-family: 'Open Sans', sans-serif;
-	text-align: center;
-	
-}
-</style>
+<link href="css/empRegistration.css" rel="stylesheet" type="text/css" />
+ 
 </head>
 <body >
 	<div class="container" >
 		<nav class="navbar navbar-expand-sm bg-light justify-content-center" >
 			<ul class="navbar-nav">
 				<li class="nav-item"><a class="nav-link" href="login">Login</a></li>
-				<li class="nav-item"><a class="nav-link" href="showEmployees">Show Employees </a></li>
+				<!-- <li class="nav-item"><a class="nav-link" href="showEmployees">Show Employees </a></li> -->
 				<li class="nav-item"><a class="nav-link" href="register">Employee Registration</a></li>
 			</ul>
 		</nav>
@@ -67,7 +39,7 @@ h1{
 				<div class="card1 pb-5">
                     <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> <img src="https://i.imgur.com/uNGdWHi.png" class="image"> </div>
                 </div>
-			<!-- <div><img  src="images/register.png" class="img-thumbnail" width="200" height="200"></div> -->
+			
 			</div>
 			<div class="panel panel-body">
 				<form action="register" method="post" enctype="multipart/form-data" >

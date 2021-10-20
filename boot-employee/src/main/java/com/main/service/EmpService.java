@@ -16,6 +16,9 @@ public interface EmpService {
 	List<EmpDto> findAllOrderByEmailIdAsc();
 	List<EmpDto> findAllOrderByEmailIdDsc();
 	List<EmpDto> findByEmployeeName(String name);
+	void saveEmployee(EmpDto empDto);
+	byte[] findPhotoByid(int id);
+	
 	 
 	
 

@@ -1,10 +1,13 @@
 package com.main.controller;
 
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
 
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -187,5 +190,19 @@ public class EmpController {
 		else {
 			return "redirect:showEmployees";
 		}
+	}
+	
+	@GetMapping("/employee/photo")
+	public void findEmployeePhoto(@RequestParam int id, HttpServletResponse response) throws IOException {
+		 byte[] photo=empService.findPhotoByid(id);
+		   response.setContentType("image/png");
+		   ServletOutputStream outputStream=response.getOutputStream();
+		   if(photo!=null) {
+			   outputStream.write(photo);
+		   }else {
+			   outputStream.write(new byte[] {});
+		   }
+		   outputStream.flush();
+		   outputStream.close();
 	}
 }

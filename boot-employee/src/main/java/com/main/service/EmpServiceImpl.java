@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.main.controller.EmpDto;
 import com.main.dao.EmpRepository;
+
 import com.main.dao.EmpEntity;
 
 @Service
@@ -32,7 +33,8 @@ public class EmpServiceImpl implements EmpService {
 			e.printStackTrace();
 		}
 
-		empRepository.save(empEntity);
+		 empRepository.save(empEntity);
+		
 
 	}
 
@@ -119,5 +121,38 @@ public class EmpServiceImpl implements EmpService {
 		}
 		return dtolist;
 	}
+
+	@Override
+	public void saveEmployee(EmpDto empDto) {
+		EmpEntity empEntity = new EmpEntity();
+		BeanUtils.copyProperties(empDto, empEntity);
+		
+		  try { 
+			  empEntity.setTphoto(empEntity.getFile().getBytes());
+			  } 
+		  catch(IOException e) { 
+			  e.printStackTrace(); 
+			  }
+		 
+
+		 EmpEntity saveEntity = empRepository.save(empEntity);
+		 //empDto.setEmployeeId(saveEntity.getEmployeeId());
+		 
+		 //return empDto;
+	}
+
+	@Override
+	public byte[] findPhotoByid(int id) {
+		Optional<EmpEntity> optionalEmployee = empRepository.findById(id);
+		if (optionalEmployee.isPresent()) {
+			return optionalEmployee.get().getTphoto();
+		} else {
+			return null;
+		}
+		
+		
+	}
+
+	
 
 }
